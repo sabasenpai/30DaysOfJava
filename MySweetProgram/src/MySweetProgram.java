@@ -16,10 +16,17 @@ public class MySweetProgram {
 			students.add(in.nextLine());
 		}
 
+		int num = 1; //diachiarazione variabile
+
 		for (int i = 0; i < students.size(); i++) {
-			System.out.println("Name: " + students.get(i));
+
+			if (students.get(i) != "") {
+				System.out.println("Linea " + (num) + " -> " + students.get(i));
+				num++;
+			}
+			
 		}
 
 		in.close();
-	}	
+	}
 }
