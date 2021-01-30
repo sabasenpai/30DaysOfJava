@@ -1,6 +1,8 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -8,25 +10,26 @@ public class MySweetProgram {
 
 	public static void main(String[] args) throws FileNotFoundException {
 
-		Scanner in = new Scanner(new File("students.txt"));
+		LinkedList<String> names = new LinkedList<String>();
 
-		List<String> students = new ArrayList<String>();
+		names.add("Caleb");
+		names.add("Sue");
+		names.add("Sally");
+
+		for (int i = 0; i < names.size(); i++) {
+			System.out.println((i+1) + ": " + names.get(i));
+		}
+
+		names.push("Nello");
+
+		for (int i = 0; i < names.size(); i++) {
+			System.out.println((i + 1) + ": " + names.get(i));
+		}
 		
-		while (in.hasNextLine()) {
-			students.add(in.nextLine());
+		System.out.println(names.pop());
+
+		for (int i = 0; i < names.size(); i++) {
+			System.out.println((i + 1) + ": " + names.get(i));
 		}
-
-		int num = 1; //diachiarazione variabile
-
-		for (int i = 0; i < students.size(); i++) {
-
-			if (students.get(i) != "") {
-				System.out.println("Linea " + (num) + " -> " + students.get(i));
-				num++;
-			}
-			
-		}
-
-		in.close();
 	}
 }
