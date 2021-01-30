@@ -8,28 +8,18 @@ import java.util.Scanner;
 
 public class MySweetProgram {
 
-	public static void main(String[] args) throws FileNotFoundException {
+	public static void main(String[] args) {
 
 		LinkedList<String> names = new LinkedList<String>();
 
-		names.add("Caleb");
-		names.add("Sue");
-		names.add("Sally");
+		names.push("Caleb");
+		names.push("Sue");
+		names.push("Sally");
 
-		for (int i = 0; i < names.size(); i++) {
-			System.out.println((i+1) + ": " + names.get(i));
-		}
-
-		names.push("Nello");
-
-		for (int i = 0; i < names.size(); i++) {
-			System.out.println((i + 1) + ": " + names.get(i));
-		}
-		
 		System.out.println(names.pop());
+		System.out.println(names.remove());
+		System.out.println(names.removeFirst());
 
-		for (int i = 0; i < names.size(); i++) {
-			System.out.println((i + 1) + ": " + names.get(i));
-		}
+		
 	}
 }
